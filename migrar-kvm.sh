@@ -43,7 +43,7 @@ sed -i 's%'"$lmemory2"'%  <currentMemory unit\='\'"KiB"\''>1048576</currentMemor
 sed -i 's%'"$lmac"'%    <mac address\='"\'$mac\'"'/>%g' /tmp/mv1.xml
 mv /tmp/mv1.xml /etc/libvirt/qemu/$name.xml
 virsh define /etc/libvirt/qemu/$name.xml
-virsh start mv2
+virsh start $name
 echo [OK]
 
 # Espera a que la máquina se levante
